@@ -50,6 +50,8 @@ public class AddCartCommandHandle : IRequestHandler<AddCartCommand, AddCartViewM
                         .Where(x => x.CartItems.Any(ci => ci.ShoppingCartID == dbShoppingCart.ID)) 
                         .FirstOrDefaultAsync();
 
+
+        //test
         if (dbOrder is null)
         {
             GenerateUUID generateUUID = new GenerateUUID();
